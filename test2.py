@@ -131,12 +131,11 @@ NavigationLayout:
                         left_action_items:[["help",lambda x:app.draw()]]
                         type:"bottom"
             MDLabel:
-                text:"Our Team"
-                pos_hint:{"center_x":1,"center_y":0.85}
-            MDTextField:
-                hint_text:"This is our team"
-                pos_hint:{"center_x":0.5,"center_y":0.6}
-                size_hint:(0.7,0.1)
+                text:"About us"
+                pos_hint:{"center_x":0.95,"center_y":0.8}
+            MDLabel:
+                text:"We here at ___________ enhance the spirit of democracy by providing you the power to change the world. The world is in your hands."
+                pos_hint:{"center_x":0.5,"center_y":0.7}
             
     MDNavigationDrawer:
         id:toot
