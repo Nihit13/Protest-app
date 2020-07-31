@@ -5,7 +5,6 @@ from kivymd.uix.list import OneLineListItem
 from kivy.uix.screenmanager import ScreenManager, Screen
 
 helper = """
-
 NavigationLayout:
     ScreenManager:
         id: screen_manager
@@ -19,7 +18,7 @@ NavigationLayout:
                 Widget:
                 MDBottomAppBar:
                     MDToolbar:
-                        title:"Help"
+                        title:"help"
                         left_action_items:[["help",lambda x:app.draw()]]
                         type:"bottom"
         Screen:
@@ -43,17 +42,16 @@ NavigationLayout:
                 hint_text:"Enter your protest name"
                 pos_hint:{"center_x":0.6,"center_y":0.8}
                 size_hint:(0.7,0.1)
+            MDLabel:
+                text:"Description:"
+                pos_hint:{"center_x":0.6,"center_y":0.65}
             MDTextField:
                 multiline:True
                 hint_text: "Enter protest description"
                 mode:"rectangle"
-                pos_hint:{"center_x":0.6,"center_y":0.65}
+                pos_hint:{"center_x":0.59,"center_y":0.65}
                 size_hint:(0.65,0.2)
-
-            MDLabel:
-                text:"Description:"
-                pos_hint:{"center_x":0.53,"center_y":0.65}
-
+            
         Screen:
             name: "screen3"
             MDLabel:
@@ -63,7 +61,6 @@ NavigationLayout:
                 MDToolbar:
                     title: "protest around"
                     elevation:5
-
                     left_action_items: [['menu', lambda x: toot.toggle_nav_drawer()]]
                 Widget:
                 MDBottomAppBar:
@@ -71,7 +68,6 @@ NavigationLayout:
                         title:"Help"
                         left_action_items:[["help",lambda x:app.draw()]]
                         type:"bottom"
-
         Screen:
             name: "screen4"
             MDLabel:
@@ -88,7 +84,6 @@ NavigationLayout:
                         title:"Help"
                         left_action_items:[["help",lambda x:app.draw()]]
                         type:"bottom"
-
         Screen:
             name: "screen5"
             MDLabel:
@@ -105,7 +100,6 @@ NavigationLayout:
                         title:"Help"
                         left_action_items:[["help",lambda x:app.draw()]]
                         type:"bottom"
-
         Screen:
             name: "screen6"
             MDLabel:
@@ -122,11 +116,8 @@ NavigationLayout:
                         title:"Help"
                         left_action_items:[["help",lambda x:app.draw()]]
                         type:"bottom"
-
         Screen:
             name: "screen7"
-            MDLabel:
-                text: "Screen 7"
             BoxLayout:
                 orientation: 'vertical'
                 MDToolbar:
@@ -139,8 +130,15 @@ NavigationLayout:
                         title:"Help"
                         left_action_items:[["help",lambda x:app.draw()]]
                         type:"bottom"
+            MDLabel:
+                text:"Our Team"
+                pos_hint:{"center_x":1,"center_y":0.85}
+            MDTextField:
+                hint_text:"This is our team"
+                pos_hint:{"center_x":0.5,"center_y":0.6}
+                size_hint:(0.7,0.1)
+            
     MDNavigationDrawer:
-
         id:toot
         BoxLayout:
             orientation: 'vertical'
@@ -162,7 +160,6 @@ NavigationLayout:
                             toot.toggle_nav_drawer()
                         IconLeftWidget:
                             icon:"android"
-
                     OneLineIconListItem:
                         text: "FAQ"
                         on_release:
@@ -170,7 +167,6 @@ NavigationLayout:
                             toot.toggle_nav_drawer()
                         IconLeftWidget:
                             icon:"android"
-
                     OneLineIconListItem:
                         text: "your protests"
                         on_release:
@@ -178,7 +174,6 @@ NavigationLayout:
                             toot.toggle_nav_drawer()
                         IconLeftWidget:
                             icon:"android"
-
                     OneLineIconListItem:
                         text: "protest merch"
                         on_release:
@@ -186,7 +181,6 @@ NavigationLayout:
                             toot.toggle_nav_drawer()
                         IconLeftWidget:
                             icon:"android"
-
                     OneLineIconListItem:
                         text: "About us"
                         on_release:
@@ -194,8 +188,6 @@ NavigationLayout:
                             toot.toggle_nav_drawer()
                         IconLeftWidget:
                             icon:"android"
-
-
 """
 
 screen = Screen()
